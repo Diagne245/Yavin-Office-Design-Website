@@ -1,0 +1,456 @@
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$line-height-base: 1.7;
+
+// Colors
+$primary: #4555d2;
+$secondary: #cc2973;
+$dark: #191e47;
+$light: #f6f8ff;
+$body-color: #494c52;
+
+// Theme Colors
+$success: #184b18;
+$info: #9352cf;
+$warning: #68680d;
+$danger: #b71dc9;
+
+// Navbar
+$navbar-nav-link-padding-x: 0.8rem;
+$navbar-padding-y: 1rem;
+$nav-link-font-weight: 700;
+
+// Links
+$link-hover-color: $primary;
+
+// Headings
+$headings-color: $dark;
+$headings-font-weight: bold;
+
+// Buttons
+$button-radius: 50px;
+$button-padding-x: 30px;
+$button-padding-y: 10px;
+
+// Border Radius
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+$navbar-toggler-border-radius: 5px;
+
+// Buttons padding
+$btn-padding-x: $button-padding-x;
+$btn-padding-x-sm: $button-padding-x;
+$btn-padding-x-lg: $button-padding-x;
+$btn-padding-x-xl: $button-padding-x;
+
+$btn-padding-y: $button-padding-y;
+$btn-padding-y-sm: $button-padding-y;
+$btn-padding-y-lg: $button-padding-y;
+$btn-padding-y-xl: $button-padding-y;
+
+// Inputs
+$input-radius: 30px;
+$input-btn-padding-y: 0.7rem;
+$input-btn-padding-x: 1rem;
+$input-border-radius: $input-radius;
+$input-border-radius-sm: $input-radius;
+$input-border-radius-lg: $input-radius;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 12,
+);
+
+$headings-margin-bottom: $spacer * 1;
+
+// Gutters
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 12,
+);
+
+// Negative Margin
+$enable-negative-margins: true;
+
+// Add values to predefined classes
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/variables-dark';
+@import '/node_modules/bootstrap/scss/maps';
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/utilities';
+@import '/node_modules/bootstrap/scss/modal';
+
+// Add breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  xxs: 438px,
+  sm: 576px,
+  mmd: 664px,
+  md: 768px,
+  mlg: 920px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1320px,
+);
+
+$container-max-widths: (
+  xxs: 401px,
+  sm: 540px,
+  mmd: 622px,
+  md: 720px,
+  mlg: 890px,
+  lg: 960px,
+  xl: 1201px,
+  xxl: 1340px,
+);
+
+// Position Values
+$position-values: (
+  n20: -20%,
+  0: 0,
+  1: 1%,
+  2: 2%,
+  3: 3%,
+  4: 4%,
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
+);
+
+// ----------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'top':
+      map-merge(
+        map-get($utilities, 'top'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'top'), 'values'),
+              $position-values
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'top':
+      map-merge(
+        map-get($utilities, 'top'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// -------------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'bottom':
+      map-merge(
+        map-get($utilities, 'bottom'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'bottom'), 'values'),
+              $position-values
+            ),
+        )
+      ),
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    'bottom':
+      map-merge(
+        map-get($utilities, 'bottom'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// -----------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'start':
+      map-merge(
+        map-get($utilities, 'start'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'start'), 'values'),
+              $position-values
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'start':
+      map-merge(
+        map-get($utilities, 'start'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// --------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'end':
+      map-merge(
+        map-get($utilities, 'end'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'end'), 'values'),
+              $position-values
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'end':
+      map-merge(
+        map-get($utilities, 'end'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// Scale Modals -------------------------
+@include media-breakpoint-up(sm) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    min-width: 90%;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Rounded class------- -----------------
+$border-radius-3xl: 3rem !default;
+$border-radius-4xl: 4rem !default;
+$border-radius-5xl: 5rem !default;
+
+// -------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'rounded':
+      map-merge(
+        map-get($utilities, 'rounded'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'rounded'), 'values'),
+              (
+                6: $border-radius-3xl,
+                7: $border-radius-4xl,
+                8: $border-radius-5xl,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+// ------------------------
+$values: (
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+);
+
+// Width class --------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          values:
+            map-merge(map-get(map-get($utilities, 'width'), 'values'), $values),
+        )
+      ),
+  )
+);
+
+// Enable Responsive classes
+$utilities: map-merge(
+  $utilities,
+  (
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// Height class ------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'height':
+      map-merge(
+        map-get($utilities, 'height'),
+        (
+          values:
+            map-merge(map-get(map-get($utilities, 'height'), 'values'), $values),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'height':
+      map-merge(
+        map-get($utilities, 'height'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// Opacity -------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'opacity':
+      map-merge(
+        map-get($utilities, 'opacity'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'opacity'), 'values'),
+              (
+                5: 0.5,
+                10: 0.1,
+                15: 0.15,
+                20: 0.2,
+                30: 0.3,
+                35: 0.35,
+                40: 0.4,
+                45: 0.45,
+                60: 0.6,
+                65: 0.65,
+                70: 0.7,
+                80: 0.8,
+                85: 0.85,
+                90: 0.9,
+                95: 0.95,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'opacity':
+      map-merge(
+        map-get($utilities, 'opacity'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// -------------------------
+$utilities: map-merge(
+  $utilities,
+  (
+    'font-size':
+      map-merge(
+        map-get($utilities, 'font-size'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
