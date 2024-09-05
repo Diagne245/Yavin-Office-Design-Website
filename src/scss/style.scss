@@ -153,13 +153,13 @@ $baseUnit: 1.1rem;
   }
 }
 
-
 // Scroll --------------
 #details-1,
 #details-2,
 #services,
 #projects,
 #contact {
+  overflow: initial;
   scroll-margin-top: 100px;
 }
 
