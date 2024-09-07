@@ -10,7 +10,7 @@ import services_html from '../static_html_files/home/services.html';
 import details_2_html from '../static_html_files/home/details_2.html';
 import intro_2_html from '../static_html_files/home/intro_2.html';
 import projects_html from '../static_html_files/home/projects.html';
-import testamonials_html from '../static_html_files/home/testamonials.html';
+import testimonials_html from '../static_html_files/home/testimonials.html';
 import contact_html from '../static_html_files/home/contact.html';
 import footer_html from '../static_html_files/home/footer.html';
 
@@ -50,7 +50,7 @@ const loadAllHTML = () => {
   document.getElementById('details-2').innerHTML = details_2_html;
   document.getElementById('intro-2').innerHTML = intro_2_html;
   document.getElementById('projects').innerHTML = projects_html;
-  document.getElementById('testamonials').innerHTML = testamonials_html;
+  document.getElementById('testamonials').innerHTML = testimonials_html;
   document.getElementById('contact').innerHTML = contact_html;
   document.getElementById('footer').innerHTML = footer_html;
 };
